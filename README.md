@@ -112,7 +112,7 @@ Processor Manufacturing & Semiconductor Technologies
 ## 📫 Contact
 
 - 📧 yigit.manafi@sabanciuniv.edu  
-- 💼 LinkedIn (see CV)  
+- 💼 LinkedIn [(see CV)](https://www.linkedin.com/in/yigit-manafi-270745217/)
 
 ---
 
