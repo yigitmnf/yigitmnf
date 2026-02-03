@@ -81,8 +81,8 @@ Alongside my coursework, I actively contribute to **academic research projects**
 
 ## 🧪 Teaching & Academic Roles
 
-- **Teaching Assistant** – Introduction to Python (Summer High School Program)
-- **Teaching Assistant** – Quantum Physics (Summer High School Program)
+- **Teaching Assistant** – Introduction to Python (Sabanci University Summer High School Program)
+- **Teaching Assistant** – Quantum Physics (Sabanci University Summer High School Program)
 - **Peer Moderator** – Calculus I–II, Natural Sciences I–II  
   *(Sabancı University Academic Support Program)*
 
