@@ -50,7 +50,6 @@ Processor Manufacturing & Semiconductor Technologies
 
 - **Languages:** Python, C++, Verilog  
 - **Tools:** Linux, GitHub, LaTeX (Overleaf), LTspice  
-- **Fields:** Algorithms, HPC, Quantum Computing, Scientific Computing  
 
 🌍 **English:** C1 (Advanced)
 
