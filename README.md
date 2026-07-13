@@ -2,7 +2,7 @@
 
 🎓 **Computer Science & Engineering** student at **Sabancı University**  
 📍 Istanbul, Turkey  
-📊 GPA: **3.92 / 4.00** 
+📊 GPA: **3.84 / 4.00** 
 
 Alongside my coursework, I actively contribute to **academic research projects** and develop **Python and C++ based tools** to strengthen my practical skills.
 
