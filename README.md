@@ -6,6 +6,20 @@
 
 I work where **algorithms**, **high-performance computing** and **software development** meet: C++ and Python on Linux, MPI/OpenMP parallel processing of large sparse data, randomized estimation, and experimental performance analysis.
 
+### 🧩 Why sparse matrices matter
+
+Most large simulations turn into a huge system of equations where each unknown depends on only a few neighbours. Written as a matrix, it is almost all zeros: a **sparse matrix**. Storing and computing only the nonzeros is what lets these simulations fit in memory and finish in time. In the 1-million-row airfoil mesh I use for SparseViz (NACA0015), only **0.0006%** of the entries are nonzero.
+
+- 🌦️ **Weather and climate:** the atmosphere is cut into millions of grid cells, and each cell only talks to the cells next to it.
+- ✈️ **Fluid flow and aerodynamics (CFD):** air flowing around a wing or a car is solved on a mesh, one row per mesh point.
+- 🏗️ **Structures and materials (FEM):** bridges, buildings and crash tests use stiffness matrices that link each node to its neighbours.
+- ⚡ **Circuit simulation:** every component connects only a few nodes, so SPICE-style simulators solve sparse systems.
+- 🌐 **Graphs and networks:** web links, social networks and road maps; PageRank is repeated sparse matrix–vector multiplication.
+- 🤖 **Machine learning:** recommender systems, graph neural networks and pruned neural networks.
+- ⚛️ **Quantum physics and chemistry:** Hamiltonians of many-particle systems are enormous but sparse.
+
+The core step in most of these is **SpMV** (y = A·x), repeated thousands of times. How fast it runs depends on the order of the rows and columns, how the matrix gets from disk into memory, and how the work is split across cores and nodes. That is what I work on: orderings in SparseViz, 400 GB sparse matrix I/O at Simula, and sparse-matrix permanent estimation.
+
 ---
 
 ## 📄 Publications
