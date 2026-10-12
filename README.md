@@ -16,10 +16,11 @@ I work on **sparse matrices and parallel performance** in academic research proj
 
 **What I did**
 
-- 🌐 Built the **[interactive guide website](https://sparcityeu.github.io/SparseViz/guide/)**: how to build, configure, run and extend SparseViz, with animations made from real SparseViz runs ([#10](https://github.com/sparcityeu/SparseViz/pull/10)).
+- 📊 Added **new metrics** to SparseViz's report: wavefront, insularity, x-vector reuse distance, row/column entropy, BFS-based ordering quality, compactness and block analysis. New comparison sections rank the orderings and check each metric against the measured kernel time (Spearman correlation, sensitivity, redundancy). [See them in the guide](https://sparcityeu.github.io/SparseViz/guide/#metrics).
 - 🐛 Bug-fix pull requests for the core library: build paths, matrix / tensor / IO fixes, and keeping local matrices ([#6](https://github.com/sparcityeu/SparseViz/pull/6), [#7](https://github.com/sparcityeu/SparseViz/pull/7), [#8](https://github.com/sparcityeu/SparseViz/pull/8)).
 - 📈 Cache-locality analysis: a cache hit plot and features for every matrix and ordering ([#9](https://github.com/sparcityeu/SparseViz/pull/9)).
 - 🖥️ Ran and measured everything on an HPC cluster (OpenMP, Slurm, NUMA-aware thread counts).
+- 🌐 Built the **[interactive guide website](https://sparcityeu.github.io/SparseViz/guide/)**: how to build, configure, run and extend SparseViz, with animations made from real SparseViz runs ([#10](https://github.com/sparcityeu/SparseViz/pull/10)).
 
 On a matrix with 1 million rows, the RCM ordering made SparseViz's SpMV kernel **3.3× faster** on one thread (31.7 ms → 9.6 ms).
 
