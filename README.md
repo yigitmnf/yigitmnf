@@ -1,8 +1,21 @@
 # 👋 Hi, I'm Yiğit Manafi
 
-🎓 **Computer Science & Engineering** student at **Sabancı University** · 📍 Istanbul, Turkey · 📊 GPA **3.84 / 4.00**
+🎓 **B.Sc. Computer Science & Engineering** at **Sabancı University** · Physics minor · Double major in Industrial Engineering  
+📊 GPA **3.84 / 4.00** · Expected graduation 2028 · 📍 Istanbul, Turkey  
+🏅 High Honour List and Academic Achievement Scholarship (2024–2025, 2025–2026)
 
-I work on **sparse matrices and parallel performance** in academic research projects, and I build tools in **C++** and **Python**.
+I work where **algorithms**, **high-performance computing** and **software development** meet: C++ and Python on Linux, MPI/OpenMP parallel processing of large sparse data, randomized estimation, and experimental performance analysis.
+
+---
+
+## 📄 Publications
+
+- **[The Quick and the Dead: Estimating Sparse-Matrix Permanents with Adaptive Work Filtering](https://arxiv.org/abs/2608.15390)**  
+  D. Elbek, **Y. Manafi**, Z. Gürdal, S. Yıldırım, K. Kaya · arXiv:2608.15390 [cs.DS], 2026  
+  Under review at **ALENEX 2026** (SIAM Symposium on Algorithm Engineering and Experiments)
+- **Survey on Sparse Matrix Ordering Methods** · co-author, in preparation (since 10/2025)
+
+Both with the Sabancı University Parallel Computing Group (Assoc. Prof. Kamer Kaya).
 
 ---
 
@@ -16,10 +29,10 @@ I work on **sparse matrices and parallel performance** in academic research proj
 
 **What I did**
 
-- 📊 Added **new metrics** to SparseViz's report: wavefront, insularity, x-vector reuse distance, row/column entropy, BFS-based ordering quality, compactness and block analysis. New comparison sections rank the orderings and check each metric against the measured kernel time (Spearman correlation, sensitivity, redundancy). [See them in the guide](https://sparcityeu.github.io/SparseViz/guide/#metrics).
+- 📊 Added **new matrix-quality metrics** to SparseViz's report: envelope, block density, Jaccard similarity, skewness of the nonzero distribution, row block efficiency, and row–column metrics (Envelope R-C, Jaccard Row-Col) that show structural asymmetry after reordering. HTML reports compare matrices and orderings side by side. [See them in the guide](https://sparcityeu.github.io/SparseViz/guide/#metrics).
 - 🐛 Bug-fix pull requests for the core library: build paths, matrix / tensor / IO fixes, and keeping local matrices ([#6](https://github.com/sparcityeu/SparseViz/pull/6), [#7](https://github.com/sparcityeu/SparseViz/pull/7), [#8](https://github.com/sparcityeu/SparseViz/pull/8)).
 - 📈 Cache-locality analysis: a cache hit plot and features for every matrix and ordering ([#9](https://github.com/sparcityeu/SparseViz/pull/9)).
-- 🖥️ Ran and measured everything on an HPC cluster (OpenMP, Slurm, NUMA-aware thread counts).
+- 🖥️ Ran and measured everything on the eX3 supercomputer (OpenMP, Slurm, NUMA-aware thread counts).
 - 🌐 Built the **[interactive guide website](https://sparcityeu.github.io/SparseViz/guide/)**: how to build, configure, run and extend SparseViz, with animations made from real SparseViz runs ([#10](https://github.com/sparcityeu/SparseViz/pull/10)).
 
 On a matrix with 1 million rows, the RCM ordering made SparseViz's SpMV kernel **3.3× faster** on one thread (31.7 ms → 9.6 ms).
@@ -44,36 +57,60 @@ On a matrix with 1 million rows, the RCM ordering made SparseViz's SpMV kernel *
 
 ---
 
-## 🚀 Other Projects
+## 🔬 Research
 
-| Project | Language |
-|---|---|
-| 💰 [Salary Filter Analyzer](https://gist.github.com/yigitmnf/afb6b26bd1c739051f90217840957732) | Python |
-| 📘 [Book Reading Scheduler](https://gist.github.com/yigitmnf/1a43c91b12ac87a2a4d6f59e4c11de6c) | Python |
-| 🏫 [University Library System](https://gist.github.com/yigitmnf/df29c9c0d19d641ef1df178237282030) | C++ |
-| 📇 [Contact Book System](https://gist.github.com/yigitmnf/2c5b04247b1b61861cbd01d758c4bbc8) | C++ |
-| 🎮 [Game Machine](https://gist.github.com/yigitmnf/5ced43b9dd455f31cce491038e2935d3) | Verilog |
-| 🎯 [FPGA Guess Game](https://gist.github.com/yigitmnf/8b37f1fb35b923602d2f8d9dd8eb5172) | Verilog |
+**Simula Research Laboratory**, Oslo · Research Intern, High-Performance Sparse Matrix I/O · *07/2026 – present*  
+Supervisor: Assoc. Prof. Johannes Langguth
+- A fast, reusable read/write system for sparse matrices of around **400 GB** each.
+- Parallel binary reading and CSR construction with **MPI** (across nodes) and **OpenMP** (within nodes) on the **eX3** supercomputer.
+- High-performance SpMV on the loaded matrices; benchmarking I/O throughput, memory bandwidth and parallel scaling.
+
+**Sabancı University** · Research Assistant, Sparse Data & Parallel Computing · *08/2025 – present*  
+Supervisor: Assoc. Prof. Kamer Kaya
+- C++ features for SparseViz (see above) and experimental testing across sparse matrix collections.
+
+**Sabancı University** · Research Course, Quantum Mechanics: Negative Probabilities · *08/2024 – 01/2025*  
+Supervisor: Prof. Zafer Gedik
+
+**Sabancı University** · Research Assistant, Materials Science & Nanoengineering (Ceramics) · *02/2024 – 07/2024*  
+Supervisor: Prof. Özge Akbulut
 
 ---
 
-## 🧪 Teaching & Academic Roles
+## 🚀 Projects
 
-- **Teaching Assistant** – Introduction to Python (Sabancı University Summer High School Program)
-- **Teaching Assistant** – Quantum Physics (Sabancı University Summer High School Program)
-- **Peer Moderator** – Calculus I–II, Natural Sciences I–II *(Sabancı University Academic Support Program)*
+**Sparse-Matrix Permanent Estimation** · C++17 / Linux  
+Randomized permanent estimators with incremental two-sided minimum-degree ordering, Sinkhorn–Knopp scaling and Dulmage–Mendelsohn support filtering. Built the multi-run statistical test harness (relative error, RSE, effective sample size) on a 60-core Xeon server; evaluated on 50 matrices with exact permanents, real SuiteSparse matrices, and against DeepNIS.
 
-## 🏭 Industry Experience
+**Time-Series Data Analysis and Prediction** · Python / Jupyter  
+398 days of sleep, heart-rate, activity and mood data: exploratory analysis and hypothesis testing, now extended with machine learning for next-day mood prediction.
 
-**Intern – TÜBİTAK BİLGEM YİTAL** · Processor Manufacturing & Semiconductor Technologies
-Photolithography · Ion implantation · IC fabrication processes
+---
+
+## 🏭 Experience
+
+- **NATO STO IST-TSI-244** · Summer School on Dual-Use Quantum Technologies · *07/2026 – 08/2026*
+- **TÜBİTAK BİLGEM YİTAL** · Processor Manufacturing Intern (photolithography, ion implantation, IC fabrication) · *01/2025 – 02/2025*
+- **QSB SU – Sabancı Quantum Society** · General Secretary · *07/2024 – present*
+- **Toastmasters**, Kocaeli · Leadership Program · *01/2026 – 02/2026*
+
+## 🧪 Teaching
+
+- **Teaching Assistant** · Data Science and Python, Sabancı Summer High School Program · *07/2026 – 09/2026*
+- **Teaching Assistant** · Introduction to Python and Quantum Physics, Sabancı Summer High School Program · *07/2025 – 09/2025*
+- **Peer Moderator** · Natural Sciences 101/102 and Math 101/102, Sabancı Academic Support Program · *10/2024 – 08/2025*
+
+---
 
 ## 🛠️ Skills
 
-- **Languages:** C++, Python, Verilog
-- **Parallel & HPC:** OpenMP, Slurm, Linux clusters
-- **Tools:** Git / GitHub, CMake, LaTeX (Overleaf), LTspice
-- 🌍 **English:** C1 (Advanced)
+- **Programming:** C++, Python, HTML
+- **HPC & Parallelism:** MPI, OpenMP, multi-threaded C++, eX3 supercomputer workflows, binary I/O, CSR formats, SpMV, scaling and bottleneck analysis
+- **Algorithms:** sparse matrices, permanent estimation, sequential importance sampling, Sinkhorn–Knopp scaling, Dulmage–Mendelsohn decomposition, minimum-degree ordering, bipartite matching, graph algorithms
+- **Data:** Jupyter, time-series analysis, exploratory data analysis, hypothesis testing, machine learning basics, benchmarking
+- **Tools:** Linux, SSH, Git / GitHub, VS Code, CMake, LaTeX / Overleaf
+- **Hardware:** Verilog, LTspice, semiconductor fabrication
+- **Languages:** Turkish (native), English (C1), Turkish Sign Language (beginner)
 
 ## 📫 Contact
 
